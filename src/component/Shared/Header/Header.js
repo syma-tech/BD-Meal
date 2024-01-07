@@ -2,9 +2,9 @@ import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import "./Header.css";
 import React, { useState } from "react";
 
-const Header = () => {
-  const [mealName, getMealName] = useState("");
-  console.log(mealName);
+const Header = ({ getSearchFood }) => {
+  // const [searchFood, getSearchFood] = useState("");
+  // console.log(searchFood);
   return (
     <div>
       <Navbar
@@ -33,9 +33,9 @@ const Header = () => {
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
-                onChange={(e) => getMealName(e.target.value)}
+                onChange={(e) => getSearchFood(e.target.value)}
               />
-              <Button variant="outline-success">Search</Button>
+              <Button variant="outline-warning">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>

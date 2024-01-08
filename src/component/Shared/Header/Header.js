@@ -1,6 +1,8 @@
 import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import "./Header.css";
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBellConcierge } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ getSearchFood }) => {
   // const [searchFood, getSearchFood] = useState("");
@@ -15,7 +17,11 @@ const Header = ({ getSearchFood }) => {
         data-bs-theme="dark"
       >
         <Container>
-          <Navbar.Brand href="#home">BD-MEAL</Navbar.Brand>
+          <Navbar.Brand href="#home" className="text-warning me-5">
+            {" "}
+            <FontAwesomeIcon className="me-2" icon={faBellConcierge} />
+            BD-MEAL
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
